@@ -50,12 +50,12 @@ Cada exercício está implementado em um arquivo separado para C++ e Java, segui
    ```bash
    cd relacionamento-entre-classes
 
-2. **Escolha um Exercício:**
+3. **Escolha um Exercício:**
 
    ```bash
    cd Ex-01
 
-2. **Escolha o Diretório da Linguagem de Programação que Preferir:**
+4. **Escolha o Diretório da Linguagem de Programação que Preferir:**
 
 - Para C++:
 
@@ -67,6 +67,6 @@ Cada exercício está implementado em um arquivo separado para C++ e Java, segui
   ```bash
    cd java
 
-3. **Execusão do Programa:**
+5. **Execusão do Programa:**
 
    Para executar os programas, consulte o arquivo README.txt localizado em cada diretório do exercício selecionado para instruções específicas de execução.
