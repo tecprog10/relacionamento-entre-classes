@@ -23,7 +23,7 @@ Este slide aborda a associação e agregação, utilizando diagramas de classes 
 ## Conteúdo do Repositório
 
 Este repositório contém os seguintes arquivos:
-
+- **Exercício 15:** Criar diagrama UML para um sistema de biblioteca com as classes:`midia`,`livro`,`DVD`,`revista`,`emprestimo`,`usuario`,`biblioteca` e `assunto`.
 - **Exercício 16:** Criar as classes `Cliente` e `Conta`, bem como implementar a associação entre estas classes.
 - **Exercício 17:** Criar as classes `Universidade` e `Pessoa`, bem como implementar a associação entre estas classes.
 - **Exercício 18:** Criar as classes `Universidade`, `Departamento` e `Pessoa`, implementando uma relação de composição e associação entre elas.
