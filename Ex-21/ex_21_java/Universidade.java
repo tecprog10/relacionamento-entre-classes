@@ -1,13 +1,11 @@
 public class Universidade {
     private String nome;
-    // Atributos para modelar a agregação com limite de 50 departamentos
     private static final int MAX_DEPARTAMENTOS = 50;
     private Departamento[] departamentos;
     private int numDepartamentosAtuais;
 
     public Universidade(String nome) {
         this.nome = nome;
-        // Inicializa o array com o tamanho máximo definido
         this.departamentos = new Departamento[MAX_DEPARTAMENTOS];
         this.numDepartamentosAtuais = 0;
     }
@@ -16,11 +14,6 @@ public class Universidade {
         return this.nome;
     }
 
-    /**
-     * Adiciona um departamento JÁ EXISTENTE à universidade (Agregação).
-     * @param depto O objeto Departamento a ser adicionado.
-     * @return true se foi adicionado com sucesso, false se o limite foi atingido.
-     */
     public boolean adicionarDepartamento(Departamento depto) {
         if (this.numDepartamentosAtuais < MAX_DEPARTAMENTOS) {
             this.departamentos[this.numDepartamentosAtuais] = depto;

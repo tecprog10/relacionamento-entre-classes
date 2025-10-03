@@ -3,34 +3,51 @@ import java.time.Period;
 
 public class Pessoa {
     private String nome;
-    private LocalDate dataNascimento;
-    private Universidade universidade; // Relacionamento com a classe Universidade
+    private int idade;
+    private int diaNascimento;
+    private int mesNascimento;
+    private int anoNascimento;
 
-    // Construtor da Pessoa
-    public Pessoa(String nome, int dia, int mes, int ano) {
+    private Universidade universidade;
+
+    public Pessoa(){
+        
+    }
+    public void setNome(String nome) {
         this.nome = nome;
-        this.dataNascimento = LocalDate.of(ano, mes, dia);
     }
 
-    // Método para associar uma universidade a esta pessoa
+    public void setDataDeNascimento(int dia, int mes, int ano) {
+        this.diaNascimento = dia;
+        this.mesNascimento = mes;
+        this.anoNascimento = ano;
+    }
+
     public void setUniversidade(Universidade universidade) {
         this.universidade = universidade;
     }
 
-    // Método que imprime os dados da pessoa no console
-    public void imprimeInformacoes() {
-        LocalDate hoje = LocalDate.now();
-        int idade = Period.between(this.dataNascimento, hoje).getYears();
+    public int getIdade() {
+        return this.idade;
+    }
 
+    public String getNome() {
+        return this.nome;
+    }
+    public void calculaIdade(int diaAtual, int mesAtual, int anoAtual) {
+        LocalDate dataNascimento = LocalDate.of(this.anoNascimento, this.mesNascimento, this.diaNascimento);
+        LocalDate dataAtual = LocalDate.of(anoAtual, mesAtual, diaAtual);
+        this.idade = Period.between(dataNascimento, dataAtual).getYears();
+    }
+
+    public void informaDados() {
         System.out.println("Nome: " + this.nome);
-        System.out.println("Idade (se estivesse vivo): " + idade + " anos");
-
-        // Verifica se a pessoa tem uma universidade associada antes de imprimir
+        System.out.println("Idade (se estivesse vivo): " + this.idade + " anos");
         if (this.universidade != null) {
-            System.out.println("Trabalhou na: " + this.universidade.getNome());
+            System.out.println("Universidade em que trabalhou: " + this.universidade.getNome());
         } else {
             System.out.println("Nenhuma universidade associada.");
         }
-        System.out.println("----------------------------------------");
+        System.out.println("---");
     }
 }
